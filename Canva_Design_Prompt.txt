@@ -1,0 +1,47 @@
+[Canva Pro Design Prompt: S.A.V.E. Disaster Response Website]
+
+ROLE:
+You are an expert UI/UX designer specializing in enterprise-grade, data-intensive web applications. You need to create a visual concept for a "AI Augmented Disaster Response Dashboard".
+
+STYLE & AESTHETIC:
+- **Theme**: "Command Center Dark Mode" — Use deep navy blues (#0f172a), charcoal blacks (#1e293b), with high-contrast neon accents.
+- **Accents**: 
+  - **Emergency Red (#ef4444)** for alerts, active disasters, and critical status.
+  - **AI Blue (#3b82f6)** for intelligence modules, analytics, and data streams.
+  - **Success Green (#10b981)** for successful rescues and resource allocation.
+- **Visuals**: Glassmorphism cards with subtle transparency, glowing borders, crisp typography (Inter or Roboto Mono for data).
+- **Vibe**: Futuristic, Mission-Critical, NASA-style Interface.
+
+LAYOUT STRUCTURE:
+
+1. **HERO SECTION**
+   - **Headline**: "S.A.V.E. — Strategic Agent-based Victim Evacuation" (Large, Bold, Sans-serif)
+   - **Sub-headline**: "AI Augmented Response System"
+   - **Visual**: A stylized map of a city with glowing connection lines between hospitals and ambulances (representing the Graph Neural Network).
+   - **CTA Button**: A large, glowing "LAUNCH TERMINAL" button with a rocket or pulse icon.
+  
+2. **CORE FEATURES GRID (3x2 Layout)**
+   - **Card 1: Multi-Agent RL** — Icon: Network of dots. Text: "Cooperative agents optimize resource allocation in real-time."
+   - **Card 2: Deep Learning** — Icon: Brain circuit. Text: "Predicts injury severity and hospital demand with 94% accuracy."
+   - **Card 3: AI Emergency Call** — Icon: Phone with sound waves. Text: "Automated voice briefings to first responders via Twilio."
+   - **Card 4: GIS Analytics** — Icon: Layered map. Text: "Heatmaps, Risk Zones, and Live Tracking on interactive maps."
+   - **Card 5: Real-time Triage** — Icon: Medical cross/Tag. Text: "ESI-based prioritization for mass casualty incidents."
+   - **Card 6: Simulation Engine** — Icon: Play button/Gears. Text: "Run scenarios with FEMA, WHO, and NDMA datasets."
+
+3. **LIVE DASHBOARD PREVIEW (Mockup)**
+   - Show a "laptop screen" frame displaying the dashboard interface.
+   - **Sidebar**: Dark with control knobs for "Disaster Type" (Fire/Flood) and "Patient Count".
+   - **Main Area**: A map with red "Fire" icons and blue "Hospital" markers. Green lines connecting them.
+   - **Data Panel**: Charts showing "Survival Rate Uplift" and "Response Time Reduction".
+
+4. **MOBILE APP VIEW (Mockup)**
+   - Show a "smartphone" frame.
+   - Screen content: An incoming call screen labeled "AI Emergency Alert" with a transcript of the briefing: "Critical Earthquake Alert... 25 Patients... High Severity."
+
+5. **FOOTER**
+   - Simple text: "Powered by Python, TensorFlow, and Multi-Agent Systems. © 2026 Emergency AI Division."
+
+INSTRUCTIONS FOR GENERATION:
+- Focus on the "Command Center" feel. It should look like software used by a high-tech government agency.
+- Use the color palette strictly (Dark Backgrounds, Neon Data).
+- Ensure the text is legible against the dark background.

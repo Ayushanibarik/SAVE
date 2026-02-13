@@ -1,0 +1,10 @@
+flask
+geopy
+streamlit
+streamlit-folium
+requests
+flask-cors
+pymongo
+pandas
+numpy
+scipy
