@@ -5,6 +5,11 @@ Environment-based settings with sensible defaults
 
 import os
 
+# Set default environment variables for local testing
+os.environ['TWILIO_ACCOUNT_SID'] = os.getenv('TWILIO_ACCOUNT_SID', 'AC3d8ad8a35d6bfa2f9560d194b115121c')
+os.environ['TWILIO_AUTH_TOKEN'] = os.getenv('TWILIO_AUTH_TOKEN', '60e4ccc50ba0c94f596311fbfae1dc06')
+os.environ['TWILIO_PHONE_NUMBER'] = os.getenv('TWILIO_PHONE_NUMBER', '+12523903034')
+
 
 class Config:
     """Application configuration with environment variable overrides"""

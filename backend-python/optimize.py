@@ -839,6 +839,42 @@ def full_disaster_response():
             log_agent_message("AI Engine", f"⚠️ AI analysis partial: {str(ai_err)}", "warning")
             ai_insights = {"status": "partial", "error": str(ai_err)}
 
+        # ============================================
+        # AI EMERGENCY CALLER
+        # ============================================
+        ai_call_result = None
+        try:
+            # Determine severity based on ESI triage or AI prediction
+            call_severity = "HIGH"
+            if "high" in str(ai_insights.get("deep_learning", {}).get("severity_prediction", "")).lower():
+                call_severity = "CRITICAL"
+            
+            # Use configured phone number or fallback
+            recipient_number = os.environ.get("TWILIO_VERIFIED_NUMBER", "+12523903034")
+            
+            log_agent_message("AI Caller Agent", f"📞 Initiating emergency call to {recipient_number}...", "info")
+            
+            ai_call_result = ai_caller.make_emergency_call(
+                to_number=recipient_number,
+                disaster_type=disaster_type,
+                location_name=f"Lat {disaster_lat:.3f}, Lng {disaster_lng:.3f}",
+                lat=disaster_lat,
+                lng=disaster_lng,
+                patient_count=patients,
+                severity=call_severity,
+                hospitals_nearby=len(hospitals),
+                ambulances_dispatched=len(dispatch)
+            )
+            
+            if ai_call_result.get("error"):
+                log_agent_message("AI Caller Agent", f"❌ Call failed: {ai_call_result['error']}", "error")
+            else:
+                log_agent_message("AI Caller Agent", f"✅ Call initiated: SID {ai_call_result.get('call_sid')}", "success")
+                
+        except Exception as call_err:
+            log_agent_message("AI Caller Agent", f"⚠️ Call error: {str(call_err)}", "warning")
+            ai_call_result = {"error": str(call_err)}
+
         result = {
             "disaster": {
                 "type": disaster_type,
@@ -861,6 +897,7 @@ def full_disaster_response():
             "staffing_requirements": staffing_data,
             "clinical_rationale": rationale,
             "ai_insights": ai_insights,
+            "ai_call_status": ai_call_result,
             "data_source": source
         }
 
